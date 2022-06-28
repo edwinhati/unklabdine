@@ -154,12 +154,12 @@
               style="height: 100px"
             ></textarea>
           </div>
-          <div class="mb-5">
+          <!-- <div class="mb-5">
             <label for="formFile" class="form-label fw-medium lh-1"
               >Add image</label
             >
             <input class="form-control" type="file" id="formFile" />
-          </div>
+          </div> -->
           <div class="mb-3">
             <a
               class="btn btn-primary fw-medium w-100 btn-shadow mb-3 text-white"

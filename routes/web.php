@@ -4,7 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RatingController;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\MenuController;
-use App\Http\Controllers\VoteController;
+use App\Http\Controllers\RateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,12 +21,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/rate', function () {
-    header("location: ../rate/information");
+// Route::get('/rate', function () {
+//     return view('rate.index');
+// });
+// Route::get('/rate', function () {
+//     header("location: ../rate/information");
+//     exit();
+// });
+// Route::get('/rate/{name}', [RateController::class, 'main']);
+Route::get('/rate', [RateController::class, 'main']);
+
+Route::get('/rate/{name}', function () {
+    header("location: ../rate/");
     exit();
 });
 
-Route::get('/rate/{name}', [VoteController::class, 'main']);
+Route::post('/rate/store', [RateController::class, 'store']);
 
 Route::get('/', [HomeController::class, 'main']);
 Route::get('/rating', [RatingController::class, 'main']);

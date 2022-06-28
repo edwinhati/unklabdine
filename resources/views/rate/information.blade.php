@@ -103,15 +103,15 @@
         </div>
       </div>
       <!-- End of Header -->
-      <div class="container">
+      <!-- <div class="container">
         <br /><br />
         <ul class="list-unstyled multi-steps">
           <li class="is-active">Environment</li>
           <li>Service</li>
           <li>Food</li>
         </ul>
-      </div>
-
+      </div> -->
+<br><br>
       <div class="container text-center">
         <h1 class="fw-bold text-primary lh-1">Information</h1>
         <p class="text-muted">
@@ -120,22 +120,23 @@
       </div>
 
       <div class="container field-container">
-        <form action="#">
+        <form action="/rate/store" method="POST">
           <div class="mb-3">
             <div class="d-flex align-items-center">
               <label for="name" class="fw-medium me-1">Name</label
               ><span class="fs-smaller text-mute">optional</span>
             </div>
             <input
-              type="email"
+              name="responden"
+              type="text"
               class="form-control"
               id="inputName"
-              placeholder="Griffin"
+              placeholder="Anonymous"
               aria-describedby="name"
             />
           </div>
 
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <div class="d-flex align-items-center">
               <label for="name" class="fw-medium me-1">What you eat?</label>
             </div>
@@ -153,7 +154,8 @@
           <div class="mb-5">
             <div class="d-flex align-items-center">
               <label for="name" class="fw-medium me-1">Add menu</label
-              ><span class="fs-smaller text-mute"
+              >
+              <span class="fs-smaller text-mute"
                 ><i
                   class="bi bi-exclamation-circle-fill me-2 fs-6 text-warning"
                   data-bs-toggle="tooltip"
@@ -170,7 +172,8 @@
               placeholder="Nasi, sayur, roti"
               aria-describedby="name"
             />
-          </div>
+          </div> -->
+          
           <div class="mb-3">
             <a
               class="btn btn-primary fw-medium w-100 btn-shadow mb-3 text-white"

@@ -142,7 +142,7 @@
       </div>
 
       <div class="container field-container">
-        <form action="#">
+        <form action="/rate/service" method="POST">
           <div class="mb-5">
             <div class="d-flex align-items-center">
               <label for="name" class="fw-medium me-1">Comment</label>
