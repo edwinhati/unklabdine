@@ -8,15 +8,26 @@
 </head>
 <body>
     <h1>test</h1>
-    <form action="/rate/store" method="POST">
-        @csrf
-        <input type="text" placeholder="id" name="id"></input><br>
-        <input type="text" placeholder="responden" name="responden"></input><br>
-        <input type="text" placeholder="comments" name="comments"></input><br>
-        <input type="text" placeholder="rating" name="rating"></input><br>
-        <input type="text" placeholder="type" name="type"></input><br>
-        <input type="text" placeholder="mealtime" name="mealtime"></input><br>
-        <input type="submit" value="store">
-    </form>
+    <?php echo date('G')+8?>
+<form action="/rate/store" method="post">
+@csrf
+    <h2>information</h2>
+    <input type="text" placeholder="responden" name="responden[]" value='edwin'><br>
+    <h2>environment</h2>
+    <input style="display: none;" type="text" name="id[]" value="{{$ide}}">
+    <input type="text" name="comments[]" value="test">
+    <input type="text" name="rating[]" value="4">
+    <h2>service</h2>
+    <input style="display: none;" type="text" name="id[]" value="{{$ids}}">
+    <input type="text" name="comments[]" value="test">
+    <input type="text" name="rating[]" value="4">
+    <h2>food</h2>
+    <input style="display: none;" type="text" name="id[]" value="{{$idf}}">
+    <input type="text" name="comments[]" value="test">
+    <input type="text" name="rating[]" value="4">
+
+    <input type="submit" value="submit">
+</form>
+
 </body>
 </html>

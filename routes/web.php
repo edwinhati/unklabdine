@@ -29,10 +29,10 @@ Route::get('/', function () {
 //     exit();
 // });
 // Route::get('/rate/{name}', [RateController::class, 'main']);
-Route::get('/rate', [RateController::class, 'main']);
+Route::get('/rate/test', [RateController::class, 'main']);
 
 Route::get('/rate/{name}', function () {
-    header("location: ../rate/");
+    header("location: ../rate/test");
     exit();
 });
 

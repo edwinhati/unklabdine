@@ -118,7 +118,6 @@
           Before we start please fill up the blank fields below
         </p>
       </div>
-
       <div class="container field-container">
         <form action="/rate/store" method="POST">
           <div class="mb-3">
@@ -150,12 +149,12 @@
               <option selected disabled value="">Nasi, sayur, roti</option>
               <option value="">...</option>
             </select>
-          </div>
+          </div> -->
           <div class="mb-5">
             <div class="d-flex align-items-center">
-              <label for="name" class="fw-medium me-1">Add menu</label
+              <label for="name" class="fw-medium me-1">What you eat?</label
               >
-              <span class="fs-smaller text-mute"
+              <!-- <span class="fs-smaller text-mute"
                 ><i
                   class="bi bi-exclamation-circle-fill me-2 fs-6 text-warning"
                   data-bs-toggle="tooltip"
@@ -163,7 +162,7 @@
                   data-bs-custom-class="custom-tooltip"
                   title="Add if your didn't find the food"
                 ></i
-              ></span>
+              ></span> -->
             </div>
             <input
               type="email"
@@ -172,7 +171,7 @@
               placeholder="Nasi, sayur, roti"
               aria-describedby="name"
             />
-          </div> -->
+          </div>
           
           <div class="mb-3">
             <a
@@ -188,6 +187,7 @@
           </div>
         </form>
       </div>
+      </form>
     </main>
 
     <footer class="footer mt-auto py-3 bg-light">
