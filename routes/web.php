@@ -21,6 +21,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/test', function () {
+    header("location: ../");
+    exit();
+});
+
+Route::get('/rate/{name}', function () {
+    header("location: ../rate/");
+    exit();
+});
+
+
+Route::get('/', [HomeController::class, 'main']);
+Route::get('/rate', [RateController::class, 'main']);
+Route::post('/rate/done', [RateController::class, 'store']);
+Route::get('/rating', [RatingController::class, 'main']);
+Route::get('/{type}', [ViewController::class, 'main']);
+Route::get('/menu', [MenuController::class, 'main']);
 // Route::get('/rate', function () {
 //     return view('rate.index');
 // });
@@ -29,19 +46,6 @@ Route::get('/', function () {
 //     exit();
 // });
 // Route::get('/rate/{name}', [RateController::class, 'main']);
-Route::get('/rate/test', [RateController::class, 'main']);
-
-Route::get('/rate/{name}', function () {
-    header("location: ../rate/test");
-    exit();
-});
-
-Route::post('/rate/store', [RateController::class, 'store']);
-
-Route::get('/', [HomeController::class, 'main']);
-Route::get('/rating', [RatingController::class, 'main']);
-Route::get('/{type}', [ViewController::class, 'main']);
-Route::get('/menu', [MenuController::class, 'main']);
 // Route::get('/{name}', function ($name) {
 //     return view($name);
 // });

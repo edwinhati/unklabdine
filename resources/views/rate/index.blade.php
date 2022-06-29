@@ -79,7 +79,8 @@
       </ul>
     </div> -->
 
-    <form action="#">
+    <form action="/rate/done" method="POST">
+      @csrf
       <div class="container border border-primary rounded-3 py-4 mt-3">
         <div class="container text-center">
           <h1 class="fw-bold text-primary lh-1">Information</h1>
@@ -93,7 +94,7 @@
             <div class="d-flex align-items-center">
               <label for="name" class="fw-medium me-1">Name</label><span class="fs-smaller text-mute">optional</span>
             </div>
-            <input type="email" class="form-control" id="inputName" placeholder="Griffin" aria-describedby="name" />
+            <input type="text" class="form-control" id="inputName" placeholder="Griffin" aria-describedby="name" name="responden[]"/>
           </div>
 
           <!-- <div class="mb-3">
@@ -105,7 +106,7 @@
               <option value="">...</option>
             </select>
           </div> -->
-          <div>
+          <!-- <div>
             <div class="d-flex align-items-center">
               <label for="name" class="fw-medium me-1">What you eat?</label><span class="fs-smaller text-mute"><i
                   class="bi bi-exclamation-circle-fill me-2 fs-6 text-warning" data-bs-toggle="tooltip"
@@ -114,7 +115,7 @@
             </div>
             <input type="email" class="form-control" id="inputName" placeholder="Nasi, sayur, roti"
               aria-describedby="name" />
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -123,18 +124,19 @@
           <h1 class="fw-bold text-primary lh-1">Environment</h1>
           <p class="text-muted">Rate the environment when you eat</p>
         </div>
-
+        <input style="display: none;" type="text" name="id[]" value="{{$ide}}">
         <div class="container d-flex justify-content-center align-items-center mb-3">
+
           <div class="rating d-flex flex-row-reverse">
-            <input type="radio" name="rating" id="rating-5" value="5" />
+            <input type="radio" name="rating[0]" id="rating-5" value="5"/>
             <label for="rating-5"></label>
-            <input type="radio" name="rating" id="rating-4" value="4" />
+            <input type="radio" name="rating[0]" id="rating-4" value="4"/>
             <label for="rating-4"></label>
-            <input type="radio" name="rating" id="rating-3" value="3" />
+            <input type="radio" name="rating[0]" id="rating-3" value="3"/>
             <label for="rating-3"></label>
-            <input type="radio" name="rating" id="rating-2" value="2" />
+            <input type="radio" name="rating[0]" id="rating-2" value="2"/>
             <label for="rating-2"></label>
-            <input type="radio" name="rating" id="rating-1" value="1" />
+            <input type="radio" name="rating[0]" id="rating-1" value="1"/>
             <label for="rating-1"></label>
           </div>
         </div>
@@ -145,7 +147,7 @@
               <label for="name" class="fw-medium me-1">Comment</label>
             </div>
             <textarea class="form-control" placeholder="Leave a comment here" id="inputComment"
-              style="height: 100px"></textarea>
+              style="height: 100px" name="comments[]"></textarea>
           </div>
         </div>
       </div>
@@ -154,19 +156,20 @@
           <h1 class="fw-bold text-primary lh-1">Service</h1>
           <p class="text-muted">Rate how they serve you</p>
         </div>
-
+        <input style="display: none;" type="text" name="id[]" value="{{$ids}}">
         <div class="container d-flex justify-content-center align-items-center mb-3">
+
           <div class="rating d-flex flex-row-reverse">
-            <input type="radio" name="rating" id="rating-5" value="5" />
-            <label for="rating-5"></label>
-            <input type="radio" name="rating" id="rating-4" value="4" />
-            <label for="rating-4"></label>
-            <input type="radio" name="rating" id="rating-3" value="3" />
-            <label for="rating-3"></label>
-            <input type="radio" name="rating" id="rating-2" value="2" />
-            <label for="rating-2"></label>
-            <input type="radio" name="rating" id="rating-1" value="1" />
-            <label for="rating-1"></label>
+              <input type="radio" name="rating[1]" id="rating-25" value="5" />
+              <label for="rating-25"></label>
+              <input type="radio" name="rating[1]" id="rating-24" value="4" />
+              <label for="rating-24"></label>
+              <input type="radio" name="rating[1]" id="rating-23" value="3" />
+              <label for="rating-23"></label>
+              <input type="radio" name="rating[1]" id="rating-22" value="2" />
+              <label for="rating-22"></label>
+              <input type="radio" name="rating[1]" id="rating-21" value="1" />
+              <label for="rating-21"></label>
           </div>
         </div>
 
@@ -176,7 +179,7 @@
               <label for="name" class="fw-medium me-1">Comment</label>
             </div>
             <textarea class="form-control" placeholder="Leave a comment here" id="inputComment"
-              style="height: 100px"></textarea>
+              style="height: 100px" name="comments[]"></textarea>
           </div>
         </div>
       </div>
@@ -185,19 +188,20 @@
           <h1 class="fw-bold text-primary lh-1">Food</h1>
           <p class="text-muted">Rate the taste of the Food</p>
         </div>
-
+        <input style="display: none;" type="text" name="id[]" value="{{$idf}}">
         <div class="container d-flex justify-content-center align-items-center mb-3">
+
           <div class="rating d-flex flex-row-reverse">
-            <input type="radio" name="rating" id="rating-5" value="5" />
-            <label for="rating-5"></label>
-            <input type="radio" name="rating" id="rating-4" value="4" />
-            <label for="rating-4"></label>
-            <input type="radio" name="rating" id="rating-3" value="3" />
-            <label for="rating-3"></label>
-            <input type="radio" name="rating" id="rating-2" value="2" />
-            <label for="rating-2"></label>
-            <input type="radio" name="rating" id="rating-1" value="1" />
-            <label for="rating-1"></label>
+              <input type="radio" name="rating[2]" id="rating-35" value="5" />
+              <label for="rating-35"></label>
+              <input type="radio" name="rating[2]" id="rating-34" value="4" />
+              <label for="rating-34"></label>
+              <input type="radio" name="rating[2]" id="rating-33" value="3" />
+              <label for="rating-33"></label>
+              <input type="radio" name="rating[2]" id="rating-32" value="2" />
+              <label for="rating-32"></label>
+              <input type="radio" name="rating[2]" id="rating-31" value="1" />
+              <label for="rating-31"></label>
           </div>
         </div>
 
@@ -207,7 +211,7 @@
               <label for="name" class="fw-medium me-1">Comment</label>
             </div>
             <textarea class="form-control" placeholder="Leave a comment here" id="inputComment"
-              style="height: 100px"></textarea>
+              style="height: 100px " name="comments[]"></textarea>
           </div>
           <!-- <div>
             <label for="formFile" class="form-label fw-medium lh-1">Add image</label>
