@@ -11,10 +11,7 @@ class RateController extends Controller
 {
     public function main() {
         $quote = DB::table('quote')->get();
-        $ide = DB::table('response')->max('id')+1;
-        $ids = DB::table('response')->max('id')+2;
-        $idf = DB::table('response')->max('id')+3;
-        return view('rate.index', ["quote"=>$quote, 'ide'=>$ide, 'ids'=>$ids, 'idf'=>$idf]);
+        return view('rate.index', ["quote"=>$quote]);
     }
     public function store(Request $request) {
 
@@ -27,8 +24,12 @@ class RateController extends Controller
             $mealtime = 'D';
         }
         
+        $ide = DB::table('response')->max('id')+1;
+        $ids = DB::table('response')->max('id')+2;
+        $idf = DB::table('response')->max('id')+3;
+
+        $id = [$ide, $ids, $idf];
         // dd($request->all());
-        $id = $request->id;
         $responden = $request->responden;
         $timecreated = date('Y-m-d');
         $comments = $request->comments;

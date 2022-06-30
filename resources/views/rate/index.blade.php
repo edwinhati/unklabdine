@@ -23,7 +23,7 @@
       <div class="container">
         <div>
           <img src="../../assets/images/header-icon.svg" alt="" />
-          <a class="navbar-brand fw-normal text-black ms-2 logo-font" href="../index.html">Unklab Dine</a>
+          <a class="navbar-brand fw-normal text-black ms-2 logo-font" href="../">Unklab Dine</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -124,7 +124,7 @@
           <h1 class="fw-bold text-primary lh-1">Environment</h1>
           <p class="text-muted">Rate the environment when you eat</p>
         </div>
-        <input style="display: none;" type="text" name="id[]" value="{{$ide}}">
+        
         <div class="container d-flex justify-content-center align-items-center mb-3">
 
           <div class="rating d-flex flex-row-reverse">
@@ -156,7 +156,7 @@
           <h1 class="fw-bold text-primary lh-1">Service</h1>
           <p class="text-muted">Rate how they serve you</p>
         </div>
-        <input style="display: none;" type="text" name="id[]" value="{{$ids}}">
+        
         <div class="container d-flex justify-content-center align-items-center mb-3">
 
           <div class="rating d-flex flex-row-reverse">
@@ -188,7 +188,7 @@
           <h1 class="fw-bold text-primary lh-1">Food</h1>
           <p class="text-muted">Rate the taste of the Food</p>
         </div>
-        <input style="display: none;" type="text" name="id[]" value="{{$idf}}">
+        
         <div class="container d-flex justify-content-center align-items-center mb-3">
 
           <div class="rating d-flex flex-row-reverse">

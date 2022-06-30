@@ -32,7 +32,7 @@
             <img src="../../assets/images/header-icon.svg" alt="" />
             <a
               class="navbar-brand fw-normal text-black ms-2 logo-font"
-              href="../index.html"
+              href="../"
               >Unklab Dine</a
             >
           </div>
